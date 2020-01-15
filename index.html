@@ -29,16 +29,17 @@
       </div>
       <!-- Adding into the array using add button by creating a new empty array and createadd function called addNew -->
       <div>
-        <input v-model ="NewPets">
+        <input v-model ="newPets" @keyup.enter="addNew">
+    <!--     v-on is very common so cand be used at @ in vueJS -->
         <button v-on:click="addNew">
         Add
         </button>
         <!--      for loop  -->
          <ul>
-         <li v-for="petAnimal in petAnimals">{{ petAnimal.name }}</li>
+         <li v-for="petAnimal in petAnimals">{{ petAnimal.name | capitalize }}</li>
          </ul>
       </div>
-       
+      <!--  filters for updating the dom and and another method is computed -->
         
   </div>
 
