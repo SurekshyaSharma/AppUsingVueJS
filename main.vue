@@ -6,18 +6,26 @@ new Vue({
      email:'',
      petAnimals:[
        {name:'Cat'},
-       {name:'Dog'},
+       {name:'dog'},
        {name:'Bird'},
-       {name:'Fish'},
+       {name:'fsh'},
        {name:'Turtle'},
-       {name:'Mice'}
+       {name:'mice'}
        ],
-     NewPets:''
+     newPets:''
   },
   methods: {
     addNew: function() {
-     return this.petAnimals.push({name: this.NewPets})
+    	this.petAnimals.push({name: this.newPets})
+      this.newPets =''
     }
+  },
+  computed:{
+  		modify: function(){
+      if (this.newPets.length >1){
+      	return this.newPets +"d"
+      }
+      }
   }
 
 })
