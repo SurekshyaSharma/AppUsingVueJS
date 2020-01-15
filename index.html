@@ -1,0 +1,47 @@
+<html>
+  <head><title>Practice VueJs</title></head>
+
+<body>
+  <div id= "theroot" align ="center">
+      <h1> {{greeting}}</h1> 
+      <input  v-model ="greeting"> <br><br>
+      <div v-if= "count===1"> Green</div>
+      <div v-else-if= "count===2"> White</div>
+      <div v-else= "count===3"> Black</div>
+      <div v-show= "count ===4"> Orange</div>
+      <div align = "left"> 
+        <!--    {{email}} --> 
+        <!--  render once the static html and teh same value -->
+        <p v-once>{{email}}
+
+        </p>
+
+        <p v-html="email">
+          <!--  parses as html and also can type the html -->
+
+        </p>
+        <br> 
+        <input v-model ="email" :class="[email.length < 5 ? 'red':'green']"> <br><br>
+        <button onclick="alert('Enter the value')" :disabled="email.length < 5" :class='{button: email.length > 5}'>
+          <!--     :disabled html function -->
+          Submit
+        </button>
+      </div>
+      <!-- Adding into the array using add button by creating a new empty array and createadd function called addNew -->
+      <div>
+        <input v-model ="NewPets">
+        <button v-on:click="addNew">
+        Add
+        </button>
+        <!--      for loop  -->
+         <ul>
+         <li v-for="petAnimal in petAnimals">{{ petAnimal.name }}</li>
+         </ul>
+      </div>
+       
+        
+  </div>
+
+</body>
+
+</html>
