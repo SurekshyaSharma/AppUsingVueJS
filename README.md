@@ -1,2 +1,2 @@
-# 5minAppUsingVueJS
+# AppUsingVueJS
 Practice vuejs App
