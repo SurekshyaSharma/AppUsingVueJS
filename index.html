@@ -29,18 +29,23 @@
       </div>
       <!-- Adding into the array using add button by creating a new empty array and createadd function called addNew -->
       <div>
+        {{modify}}
+        <br> <br>
         <input v-model ="newPets" @keyup.enter="addNew">
-    <!--     v-on is very common so cand be used at @ in vueJS -->
+        <!--     v-on is very common so cand be used at @ in vueJS -->
         <button v-on:click="addNew">
-        Add
+          Add
         </button>
         <!--      for loop  -->
          <ul>
-         <li v-for="petAnimal in petAnimals">{{ petAnimal.name | capitalize }}</li>
+         <li v-for="petAnimal in petAnimals">{{ petAnimal.name|capitalize| kitify }}</li>
          </ul>
       </div>
       <!--  filters for updating the dom and and another method is computed -->
-        
+       <ul>
+       
+       <li v-for="petAnimal in petAnimals">{{cat.name}}</li>
+       </ul>
   </div>
 
 </body>
