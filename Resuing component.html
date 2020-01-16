@@ -1,0 +1,14 @@
+<div class='main'>
+{{newFruit}}
+<br><br>
+<input v-model='newFruit' @keyup.enter='addFruits'>
+<button @click="addFruits" >ADD
+</button>
+  <ul>
+    <li v-for='fruit in fruits'>{{fruit.name}}</li>
+  </ul>
+   <!--  Reusing the component -->
+  <fruit-list :fruits='fruits'/>
+  <healthy-fruits :fruits='fruits'/>
+ <!--  v-bind short cut ":" -->
+</div>
