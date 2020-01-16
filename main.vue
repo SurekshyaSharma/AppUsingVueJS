@@ -1,3 +1,5 @@
+
+
 new Vue({
   el:"#theroot",
   data: {
@@ -23,9 +25,17 @@ new Vue({
   computed:{
   		modify: function(){
       if (this.newPets.length >1){
-      	return this.newPets +"d"
+      	return this.newPets +'y'
       }
       }
+  },
+  filters:{
+  capitalize: function(value){
+  return value.toUpperCase()
+  },
+  kitify: function(value){
+  return value +'y'
+  }
   }
 
 })
