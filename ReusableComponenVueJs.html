@@ -1,0 +1,13 @@
+<html>
+    <div id="main">
+        <div>
+            <ul>
+                 <li v-for = "item in items"> {{item.name}}</li>
+                 <new-status :items="items"></new-status><br>
+                 <new :items='items'></new>
+                 
+            </ul>      
+        </div>
+    </div>
+
+</html>
