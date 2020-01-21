@@ -1,0 +1,23 @@
+Vue.component('new-status',{
+	props:['items'],
+		template:'<ul><li v-for = "item in items"> {{item.name}}</li></ul> '
+}),
+Vue.component('new',{
+	props:['items'],
+		template:'<ul><li v-for = "item in items"> {{item.name}}</li></ul> '
+}),
+app = new Vue({
+	el:'#main',
+   component:[
+   	'new-status','new'
+    ],
+  data:{
+  	items:[
+			{name:'Single'}, 
+      {name:'Married'},
+      {name:'Divorced'},
+      {name:'Widow'}
+      ]
+  }
+ 
+})
